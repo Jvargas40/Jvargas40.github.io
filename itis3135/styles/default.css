@@ -1,51 +1,73 @@
+/* Air Force Theme Colors */
 :root {
-    --gunmetal: #13262f;
-    --fielddrab: #73683b;
-    --cadetgray: #9aadbf;
-    --airblue: #6d98ba;
-    --tomato: #fc5130;
+    --gunmetal: #13262f; /* Dark military blue */
+    --fielddrab: #8b8f7f; /* More readable muted gray */
+    --cadetgray: #9aadbf; /* Soft blue-gray */
+    --airblue: #5b86a6; /* Deepened Air Force blue */
+    --airforce-yellow: #ffcc00; /* Military yellow for accents */
+    --desaturated-red: #b33939; /* Subdued red for contrast */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     background-color: var(--gunmetal);
-    color: var(--fielddrab);
-    font-size: medium;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--fielddrab);
 }
 
-h1, h2 {
+/* Headers & Footer */
+header, footer {
     text-align: center;
-    color: var(--tomato);
-    background-color: var(--cadetgray);
+    color: var(--airforce-yellow);
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-ul, li {
-    text-align: left;
-    word-wrap: break-word;
+/* Main Content */
+main {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav > a {
-    margin-top: -4px;
+/* Text & Links */
+p {
+    font-size: 25px;
 }
 
-.nav-links {
-    padding: 20px 0;
-    margin-bottom: 10px;
-}
-
-.nav-links a {
+a {
     color: var(--airblue);
     text-decoration: none;
+    font-weight: bold;
 }
 
-.nav-links a:hover,
-.nav-links a:visited,
-.nav-links a::after {
+a:hover {
     color: var(--cadetgray);
+    text-decoration: underline;
+}
+
+/* Headings */
+h2, h3 {
+    text-align: center;
+    font-size: 95%;
+    color: var(--airforce-yellow);
+}
+
+/* Images */
+img {
+    width: 40%;
+    height: auto;
+    border: 5px groove darkgray;
+}
+
+figure figcaption {
+    text-align: center;
+    font-style: italic;
 }
 
 figure {
@@ -53,28 +75,7 @@ figure {
     font-style: italic;
 }
 
-main {
-    width: 95%;
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 25px;
-}
-
-a {
-    color: var(--airblue);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--cadetgray);
-}
-
-img {
-    width: 40%;
-    height: auto;
-    border: 5px groove darkgray;
-}
-
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -89,27 +90,178 @@ th, td {
 
 th {
     background-color: var(--gunmetal);
-    color: white;
+    color: var(--airforce-yellow);
+    font-weight: bold;
 }
 
 tr:nth-child(even) {
     background-color: var(--cadetgray);
 }
 
-button {
+/* Alignment Fixes */
+#tables {
+    margin-left: 185px;
+}
+
+#website {
+    margin-left: 364px;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--cadetgray);
+    border-radius: 4px;
     background-color: var(--gunmetal);
-    color: var(--airblue);
+    color: white;
+}
+
+button {
+    background-color: var(--airblue);
+    color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 10px;
+    font-weight: bold;
 }
 
+button:hover {
+    background-color: var(--cadetgray);
+    color: var(--gunmetal);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="reset"], input[type="submit"] {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: var(--desaturated-red);
+    color: white;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
+    background-color: var(--cadetgray);
+    color: var(--gunmetal);
+}
+
+select {
+    margin: 10px;
+    background-color: var(--gunmetal);
+    color: white;
+}
+
+/* Slogan */
+.slogan {
+    margin-left: -4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Responsive Design */
+/* Laptop/Small Screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        width: 90%;
+    }
+    img {
+        width: 50%;
+    }
+    .calculator-body {
+        width: 600px;
+        height: 480px;
+    }
+    .calculator-screen {
+        width: 560px;
+    }
+    .numpad {
+        height: 180px;
+        width: 280px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 90%;
+        font-size: 18px;
+    }
+    img {
+        width: 60%;
+    }
+    .calculator-body {
+        width: 500px;
+        height: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .calculator-screen {
+        width: 460px;
+    }
+    .numpad {
+        height: 160px;
+        width: 240px;
+    }
+    .numpad button,
+    .operators button {
+        font-size: 20px;
+        width: 60px;
+    }
+    .operators button:last-of-type {
+        width: 100px;
+    }
+}
+
+/* Mobile */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        width: 90%;
+        font-size: 18px;
+    }
+    img {
+        width: 60%;
+    }
+    .calculator-body {
+        width: 500px;
+        height: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .calculator-screen {
+        width: 460px;
+    }
+    .numpad {
+        height: 160px;
+        width: 240px;
+    }
+    .numpad button,
+    .operators button {
+        font-size: 20px;
+        width: 60px;
+    }
+    .operators button:last-of-type {
+        width: 100px;
+    }
+}
+
+/* Calculator */
 .calculator-body {
     background-color: var(--cadetgray);
     width: 750px;
     height: 600px;
-    border: 5px solid var(--fielddrab);
+    border: 5px solid var(--gunmetal);
     text-align: center;
     border-radius: 15px;
     margin-left: 65px;
@@ -118,11 +270,40 @@ button {
 .calculator-screen {
     width: 700px;
     height: 100px;
-    background: var(--tomato);
+    background: var(--desaturated-red);
     margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    color: var(--airblue);
+    color: var(--airforce-yellow);
+    font-weight: bold;
+}
+
+.operators {
+    margin: auto 10px auto 10px;
+}
+
+.numpad {
+    height: 210px;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.numpad button, .operators button {
+    font-size: 25px;
+    width: 70px;
+    background-color: var(--airblue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.numpad button:hover, .operators button:hover {
+    background-color: var(--cadetgray);
+    color: var(--gunmetal);
+}
+
+.operators button:last-of-type {
+    width: 115px;
 }

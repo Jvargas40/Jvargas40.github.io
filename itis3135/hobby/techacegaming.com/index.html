@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Air Force Theme Colors -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Ace Gaming</title>
+    <style>
+        :root {
+            --gunmetal: #13262f; /* Dark military blue */
+            --fielddrab: #8b8f7f; /* More readable muted gray */
+            --cadetgray: #9aadbf; /* Soft blue-gray */
+            --airblue: #5b86a6; /* Deepened Air Force blue */
+            --airforce-yellow: #ffcc00; /* Military yellow for accents */
+            --desaturated-red: #b33939; /* Subdued red for contrast */
+        }
+
+        /* General Layout */
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+            background-color: var(--gunmetal);
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+            color: var(--fielddrab);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            color: var(--airforce-yellow);
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        header img {
+            width: 60px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            display: inline;
+            font-size: 2rem;
+            color: var(--airforce-yellow);
+        }
+
+        /* Main Content */
+        main {
+            width: 95%;
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+        h2, h3 {
+            text-align: center;
+            font-size: 1.5em;
+            color: var(--airforce-yellow);
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        /* Unordered List with Custom Bullet Style */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 50px;
+        }
+
+        ul li::before {
+            content: "🎮";
+            margin-right: 8px;
+            color: var(--desaturated-red);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background-color: var(--cadetgray);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            color: var(--gunmetal);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: var(--airforce-yellow);
+            padding: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>
+            <img src="images/logo.png" alt="Tech Ace Gaming Logo"> Tech Ace Gaming
+        </h1>
+        <p><em>Your Ultimate Gaming Setup Awaits</em></p>
+    </header>
+
+    <main>
+        <h2>Welcome to Tech Ace Gaming</h2>
+        <p>Tech Ace Gaming is your go-to destination for high-performance gaming gear, custom modded controllers, and anime-themed gaming setups. Whether you're an esports competitor, streamer, or casual player, we have the best gear to level up your setup. We believe every gamer deserves the ultimate experience, and we’re here to make that happen.</p>
+        
+        <h3>Why Choose Tech Ace Gaming?</h3>
+        <ul>
+            <li>High-performance gaming gear</li>
+            <li>Exclusive anime-inspired PC builds</li>
+            <li>Custom modded controllers for all platforms</li>
+            <li>RGB LED mechanical keyboards and precision gaming mice</li>
+            <li>Expert gaming setup consultations</li>
+            <li>Lightning-fast gaming routers and accessories</li>
+            <li>Streaming and content creation bundles</li>
+            <li>Exclusive gaming merchandise and collectibles</li>
+        </ul>
+
+        <p>At Tech Ace Gaming, we do more than just sell gaming gear. We customize your setup to match your style, enhance your gameplay, and optimize your experience. Whether you're looking for high-speed performance or a stylish, anime-themed gaming station, we've got you covered.</p>
+
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            📍 123 Gamer Street, Pixel City, NC 28262 <br>
+            📞 (704) 555-TECH <br>
+            ✉ contact@techacegaming.com
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tech Ace Gaming | <em>Your Ultimate Gaming Setup Awaits</em></p>
+    </footer>
+
+</body>
+</html>

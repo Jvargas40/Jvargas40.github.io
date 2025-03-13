@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Workout</title>
+    <style>
+        /* 1E1E24-FD7014-9A031E-5F0F40-6A0572-3D348B */
+        :root {
+            --midnight: #1E1E24;
+            --orange: #FD7014;
+            --red: #9A031E;
+            --purple: #5F0F40;
+            --deep-purple: #6A0572;
+            --blue: #3D348B;
+        }
+        
+        body {
+            background-color: var(--midnight);
+            color: var(--orange);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        h1 {
+            font-size: 50px;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        main {
+            width: 95%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        button {
+            background-color: var(--red);
+            color: var(--jet);
+            width: 90px;
+            height: 35px;
+        }
+
+        button:hover {
+            background-color: var(--purple);
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--deep-purple);
+        }
+
+        section div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            border: 5px groove var(--red);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        figure {
+            text-align: center;
+            font-style: italic;
+        }
+
+        #about img {
+            width: 30%;
+            height: 30%;   
+        }
+
+        #home img, #time img, #how img, #why img, #location img {
+            width: 50%;
+        }
+
+        ol li{
+            padding: 10px;
+        }
+
+        #home p:nth-of-type(1) {
+            text-align: center;
+        }
+
+        #time p {
+            text-align: center;
+        }
+
+        #location p:nth-last-of-type(2) {
+            text-align: center;
+        }
+
+        #how p:nth-of-type(1) {
+            text-align: center;
+        }
+
+        #why p:nth-of-type(1) {
+            text-align: center;
+        }
+
+        @media screen and ( min-width: 768px ) and ( max-width: 1024px ) {
+            body {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            main {
+                font-size: 20px;
+            }
+
+            button {
+                width: 90px;
+                height: 30px;
+            }
+
+            #about img {
+                width: 25%;
+                height: 25%;
+            }
+
+            #home img, #time img, #how img, #why img, #location img {
+                width: 40%;
+            }
+        }
+
+        @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+            body {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            main {
+                font-size: 18px;
+            }
+
+            button {
+                width: 80px;
+                height: 25px;
+            }
+
+            #about img {
+                width: 20%;
+                height: 20%;
+            }
+
+            #home img, #time img, #how img, #why img, #location img {
+                width: 35%;
+            }
+        }
+
+        @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                font-size: 16px;
+            }
+
+            button {
+                width: 70px;
+                height: 20px;
+            }
+
+            #about img {
+                width: 15%;
+                height: 15%;
+            }
+
+            #home img, #time img, #how img, #why img, #location img {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <header>
+        <h1>Jayden's Workout Journey</h1>
+        <nav>
+            <button>Home</button>
+            ||
+            <button>About Me</button>
+            ||
+            <button>Best Times</button>
+            ||
+            <button>Locations</button>
+            ||
+            <button>How</button>
+            ||
+            <button>Why</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <figure>
+                <img src="images/man_lifting_weights.jpg" alt="man_lifting_weights">
+                <figcaption>Strength Training</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: Man lifting weights</em></p>
+            <p>Welcome to my fitness page! Staying active has been a passion of mine since I was a teenager. Whether it's lifting weights, running, or pushing through an intense workout session, I love the challenge and discipline it brings. This website is dedicated to sharing workout plans, training techniques, and insights on how to optimize performance. Join me in building strength, endurance, and motivation.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <figure>
+                <img src="images/IMG_0642.jpg" alt="jayden_working_out">
+                <figcaption>My Fitness Transformation</figcaption>
+            </figure>
+            <p>I'm a junior, majoring in computer science, concentrating in information technology with a passion for fitness and training. My academic journey keeps me engaged, but I always make time for physical activity. From weightlifting to endurance training, fitness has taught me dedication, resilience, and balance. Alongside working out, I enjoy researching new exercise methods and optimizing my training routines to maximize progress. I also play video games during my spare time currently a console player PS5.</p>
+        </section>
+        <section id="time">
+            <h2>Best Times</h2>
+            <p>Choosing the right time to train can significantly impact performance and results. Understanding when your body performs best can help optimize your workout routine:</p>
+            <figure>
+                <img src="images/man_running_at_sunrise.jpg" alt="man_running_at_sunrise">
+                <figcaption>Morning Workouts</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: A man jogging at sunrise</em></p>
+            <ul>
+                <li>Morning: Starting your day with a workout boosts your metabolism and helps you stay energized. It also improves focus, making you more productive throughout the day. Morning workouts can also build consistency by making fitness a daily habit.</li>
+            </ul>
+            <figure>
+                <img src="images/man_lifting_weights_at_night.jpg" alt="man_lifting_weights_at_night">
+                <figcaption>Evening Training</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: A man lifting weights in a gym at night</em></p>
+            <ul>
+                <li>Evening: Strength and endurance tend to peak later in the day, making it ideal for intense workouts. Training in the evening can also help relieve stress after a long day. Plus, your body is already warmed up, reducing the risk of injury.</li>
+            </ul>
+            <figure>
+                <img src="images/person_stretching_after_workout.jpg" alt="person_stretching_after_workout">
+                <figcaption>Rest and Recovery</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: A person stretching after an intense workout</em></p>
+            <ul>
+                <li>Rest Days: Taking time off from training is just as important as working out. Rest days allow your muscles to recover and grow, preventing burnout and injuries. Active recovery, like stretching or light movement, can help maintain flexibility and reduce stiffness.</li>
+            </ul>
+        </section>
+        <section id="location">
+            <h2>Best Locations</h2>
+            <p>The environment you train in can shape your workout experience. Here are some ideal locations based on training styles:</p>
+            <figure>
+                <img src="images/modern_gym_equipment.jpg" alt="modern_gym_equipment">
+                <figcaption>Gym Training</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: A modern gym with various workout equipment</em></p>
+            <ul>
+                <li>Gym: Gyms provide access to a wide range of equipment, making them perfect for strength training. They also offer a controlled environment where you can track progress and gradually increase resistance. With trainers and classes available, they are a great place to learn new exercises.</li>
+            </ul>
+            <figure>
+                <img src="images/man_doing_pushups_outside.jpg" alt="man_doing_pushups_outside">
+                <figcaption>Outdoor Training</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: A man doing pushups in a park</em></p>
+            <ul>
+                <li>Outdoor: Parks and open spaces provide fresh air and natural scenery, which can make workouts more enjoyable. Outdoor training is great for bodyweight exercises, running, and endurance activities. It’s also a free and flexible way to stay active without needing a gym membership.</li>
+            </ul>
+            <figure>
+                <img src="images/compact_home_gym_setup.jpg" alt="compact_home_gym_setup">
+                <figcaption>Home Workouts</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: A compact home gym setup with weights and a mat</em></p>
+            <ul>
+                <li>Home: Working out at home allows for convenience and privacy, making it easier to stay consistent. You can create a personalized setup with basic equipment like dumbbells, resistance bands, or a yoga mat. Home workouts also save time and eliminate the need for travel.</li>
+            </ul>
+        </section>
+        <section id="how">
+            <h2>How</h2>
+            <figure>
+                <img src="images/man_perfecting_form.jpg" alt="man_perfecting_form">
+                <figcaption>Proper Form Matters</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: Man perfecting form</em></p>
+            <p>Mastering technique and form is essential for avoiding injuries and maximizing gains. Here are some fundamental principles:</p>
+            <ol>
+                <li>Engage your core: Keeping your core tight improves balance and stability during exercises. A strong core also protects your lower back from strain. It’s essential for maintaining proper posture while lifting weights.</li>
+                <li>Controlled movements: Moving too fast can lead to improper form and injuries. Focus on slow, controlled reps to fully activate the muscles you’re targeting. This also helps improve coordination and muscle endurance over time.</li>
+                <li>Progressive overload: To build strength, gradually increase the weight, reps, or intensity of your workouts. This challenges your muscles and forces them to grow stronger. Avoid jumping to heavy weights too soon to prevent injuries.</li>
+                <li>Proper breathing: Breathing correctly can make a big difference in performance. Inhale before lifting and exhale as you exert force to stabilize your core. Proper breathing also helps you maintain endurance during high-intensity workouts.</li>
+                <li>Rest between sets: Taking short breaks allows your muscles to recover so you can push harder. Rest time depends on your workout goals—short breaks for endurance, longer ones for strength. Proper rest helps you perform better in each set.</li>
+                <li>Stretch before and after: Warming up with dynamic stretches prepares your muscles for movement. Cooling down with static stretching improves flexibility and reduces soreness. This also lowers the risk of muscle tightness after intense workouts.</li>
+                <li>Listen to your body: Pay attention to discomfort or pain during training. If something feels off, adjust your form or take a break to prevent injuries. Your body needs recovery just as much as it needs exercise.</li>
+            </ol>
+        </section>
+        <section id="why">
+            <h2>Why</h2>
+            <figure>
+                <img src="images/man_training_hard.jpg" alt="man_training_hard">
+                <figcaption>Stay Motivated</figcaption>
+            </figure>
+            <p><em><a href="https://www.imagine.art/">AI </a>Prompt: Man staying motivated</em></p>
+            <p>Fitness is about more than just looking good—it improves both physical and mental health. Regular exercise builds discipline, helping you stay consistent with goals. It also boosts confidence and provides a sense of accomplishment.</p>
+            <p>Working out reduces stress and increases energy levels, making it easier to stay productive. It’s a great way to clear your mind and focus on personal growth. Whether training alone or with friends, fitness helps build a positive mindset.</p>
+            <p>Long-term health benefits include stronger muscles, better endurance, and improved heart health. Staying active reduces the risk of chronic illnesses and keeps you feeling younger. Making fitness a lifestyle choice leads to a healthier, more active future.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Page Built by <a href="techacegaming.com">Tech Ace Gaming </a>&copy;2024, <a href="https://www.freecodecamp.org/certification/JAYVAR21/responsive-web-design">Responsive Web Design</a></p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+        </a>
+        <a href="https://wave.webaim.org/report#" id="validation_link_wcag">
+            <img style="border:0;width:88px;height:31px" src="images/button_validation_wcag.png" alt="Valid WCAG">
+        </a>
+    </footer>
+    <script>
+        //changes the url to ensure that the current page is validated instead of just the index page
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        document.getElementById("validation_link_wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
+        
+        //shows the section of the page visted, hides the rest
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('nav button');
+            const sectionIds = ['home', 'about', 'time', 'location', 'how', 'why'];
+
+            navButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    showSection(sectionIds[index]);
+                });
+            });
+            
+            showSection('home'); //shows home by default
+        }); 
+    </script>
+</body>
+</html>
+
+
+
+

@@ -75,29 +75,6 @@ figure {
     font-style: italic;
 }
 
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: var(--gunmetal);
-    color: var(--airforce-yellow);
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: var(--cadetgray);
-}
-
 /* Alignment Fixes */
 #tables {
     margin-left: 185px;
@@ -105,12 +82,6 @@ tr:nth-child(even) {
 
 #website {
     margin-left: 364px;
-}
-
-/* Forms */
-form {
-    max-width: 500px;
-    margin: auto;
 }
 
 input[type="text"], input[type="tel"], input[type="email"], textarea {
@@ -254,56 +225,4 @@ select {
     .operators button:last-of-type {
         width: 100px;
     }
-}
-
-/* Calculator */
-.calculator-body {
-    background-color: var(--cadetgray);
-    width: 750px;
-    height: 600px;
-    border: 5px solid var(--gunmetal);
-    text-align: center;
-    border-radius: 15px;
-    margin-left: 65px;
-}
-
-.calculator-screen {
-    width: 700px;
-    height: 100px;
-    background: var(--desaturated-red);
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    color: var(--airforce-yellow);
-    font-weight: bold;
-}
-
-.operators {
-    margin: auto 10px auto 10px;
-}
-
-.numpad {
-    height: 210px;
-    width: 300px;
-    margin: 50px auto;
-}
-
-.numpad button, .operators button {
-    font-size: 25px;
-    width: 70px;
-    background-color: var(--airblue);
-    color: white;
-    border-radius: 5px;
-    border: none;
-}
-
-.numpad button:hover, .operators button:hover {
-    background-color: var(--cadetgray);
-    color: var(--gunmetal);
-}
-
-.operators button:last-of-type {
-    width: 115px;
 }

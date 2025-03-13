@@ -75,6 +75,29 @@ figure {
     font-style: italic;
 }
 
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--gunmetal);
+    color: var(--airforce-yellow);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: var(--cadetgray);
+}
+
 /* Alignment Fixes */
 #tables {
     margin-left: 185px;
@@ -83,6 +106,13 @@ figure {
 #website {
     margin-left: 364px;
 }
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
 
 input[type="text"], input[type="tel"], input[type="email"], textarea {
     width: 100%;

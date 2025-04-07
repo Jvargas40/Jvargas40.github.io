@@ -1,0 +1,120 @@
+:root {
+    --light-blue: #cceaff;
+    --header-blue: #3399ff;
+    --nav-blue: #b3d9ff;
+    --text-dark: #003366;
+    --text-light: #ffffff;
+    --sidebar-bg: #e6f2ff;
+    --footer-bg: #99ccff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--light-blue);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-blue);
+    color: var(--text-light);
+    z-index: 1000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.header-navbar {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    background-color: var(--nav-blue);
+}
+
+.header-navbar a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+.header-navbar a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 200px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    border-right: 2px solid #ccc;
+}
+
+main {
+    margin-left: 220px;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-dark);
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    aside {
+        position: static;
+        width: 100%;
+        border-right: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .header-navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

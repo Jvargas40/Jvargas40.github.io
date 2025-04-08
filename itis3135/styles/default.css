@@ -63,6 +63,7 @@ img {
     width: 40%;
     height: auto;
     border: 5px groove darkgray;
+    box-sizing: border-box;
 }
 
 figure figcaption {

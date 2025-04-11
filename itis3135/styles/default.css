@@ -260,6 +260,12 @@ select {
     transform: scale(1.2);
 }
 
+.validator-badge {
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
+
 /* Fading animation */
 .fade {
     animation: fadeIn 1s ease-in-out;

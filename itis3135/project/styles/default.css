@@ -337,3 +337,19 @@ details.active-service {
     transition: background-color 0.3s ease;
 }
 
+/* Sidebar Interactions */
+#toggle-spotlight, #toggle-fastfact {
+    background-color: var(--header-blue);
+    color: var(--text-light);
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#toggle-spotlight:hover, #toggle-fastfact:hover {
+    background-color: var(--footer-bg);
+}
+

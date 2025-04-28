@@ -328,3 +328,12 @@ button:hover {
         font-size: 12px;
     }
 }
+
+details.active-service {
+    background-color: var(--navbar-bg);
+    border: 2px solid var(--header-blue);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+

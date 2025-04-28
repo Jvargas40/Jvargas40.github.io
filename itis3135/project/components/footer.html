@@ -1,5 +1,5 @@
 <footer>
-    <nav>
+    <nav id="footer-nav">
         <a target="_blank" href="https://webpages.charlotte.edu/jvarga21/">Webspaces</a> ||
         <a target="_blank" href="https://github.com/Jvargas40">GitHub</a> ||
         <a target="_blank" href="https://jvargas40.github.io/itis3135/">GitHub.io</a> ||
@@ -7,12 +7,17 @@
         <a target="_blank" href="https://www.freecodecamp.org/JAYVAR21">freeCodeCamp</a> ||
         <a target="_blank" href="https://www.codecademy.com/profiles/JAYVAR21">Codecademy</a>
     </nav>
-    
-    <p>Designed by <a href="techacegaming.com">J.V. Gaming</a> © 2025, 
+
+    <p>Designed by <a href="https://techacegaming.com">J.V. Gaming</a> © <span id="year">2025</span>, 
         <em>Certified in <a href="https://www.freecodecamp.org/certification/JAYVAR21/javascript-algorithms-and-data-structures-v8">JADS</a>.</em></p>
 
-        <p>&copy; 2025 Clifford Favors. All rights reserved.</p>
-    
+    <p>&copy; <span id="year2">2025</span> Clifford Favors. All rights reserved.</p>
+
+    <div style="margin-top:10px;">
+        <button id="toggle-footer-theme" style="padding:5px 10px; border-radius:5px; background-color:#84c5f4; color:white; border:none; cursor:pointer;">Toggle Footer Theme</button>
+    </div>
+
+    <div style="margin-top:10px;">
         <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
             <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
         </a>
@@ -22,9 +27,44 @@
         <a href="https://wave.webaim.org/report#" id="validation_link_wcag">
             <img style="border:0;width:88px;height:31px" src="images/button_validation_wcag.png" alt="Valid WCAG">
         </a>
-    </footer>
-    <script>
-        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-        document.getElementById("validation_link_wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
-    </script>
+    </div>
+</footer>
+
+<script>
+    // Update year dynamically
+    const currentYear = new Date().getFullYear();
+    document.getElementById("year").textContent = currentYear;
+    document.getElementById("year2").textContent = currentYear;
+
+    // Validation links
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getElementById("validation_link_wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
+
+    // Footer theme toggle
+    const footer = document.querySelector('footer');
+    const toggleBtn = document.getElementById('toggle-footer-theme');
+    let isDefaultTheme = true;
+
+    toggleBtn.addEventListener('click', () => {
+        if (isDefaultTheme) {
+            footer.style.backgroundColor = '#1e3d58';
+            footer.style.color = '#ffffff';
+        } else {
+            footer.style.backgroundColor = '#4a90e2';
+            footer.style.color = '#ffffff';
+        }
+        isDefaultTheme = !isDefaultTheme;
+    });
+
+    // Hover color change on nav links
+    const footerLinks = document.querySelectorAll('#footer-nav a');
+    footerLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.color = "#ffcc00"; // Light gold hover
+        });
+        link.addEventListener('mouseout', () => {
+            link.style.color = "";
+        });
+    });
+</script>

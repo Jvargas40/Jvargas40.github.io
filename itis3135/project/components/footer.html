@@ -31,17 +31,17 @@
 </footer>
 
 <script>
-    // Update year dynamically
+    // Dynamic year
     const currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
     document.getElementById("year2").textContent = currentYear;
 
     // Validation links
-    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    document.getElementById("validation_link_wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
+    document.getElementById("validation_link_html").href = "https://validator.w3.org/check?uri=" + location.href;
+    document.getElementById("validation_link_css").href = "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href;
+    document.getElementById("validation_link_wcag").href = "https://wave.webaim.org/report#/" + location.href;
 
-    // Footer theme toggle
+    // Footer Theme Toggle
     const footer = document.querySelector('footer');
     const toggleBtn = document.getElementById('toggle-footer-theme');
     let isDefaultTheme = true;
@@ -57,11 +57,11 @@
         isDefaultTheme = !isDefaultTheme;
     });
 
-    // Hover color change on nav links
+    // Hover effects for footer nav links
     const footerLinks = document.querySelectorAll('#footer-nav a');
     footerLinks.forEach(link => {
         link.addEventListener('mouseover', () => {
-            link.style.color = "#ffcc00"; // Light gold hover
+            link.style.color = "#ffcc00";
         });
         link.addEventListener('mouseout', () => {
             link.style.color = "";

@@ -1,54 +1,35 @@
+// scripts/footerInteraction.js
 document.addEventListener('DOMContentLoaded', () => {
     function initFooterFeatures() {
-        const footer = document.querySelector('footer');
-        const toggleBtn = document.getElementById('toggle-footer-theme');
-        const year1 = document.getElementById('year');
-        const year2 = document.getElementById('year2');
-        const htmlLink = document.getElementById("validation_link_html");
-        const cssLink = document.getElementById("validation_link_css");
-        const wcagLink = document.getElementById("validation_link_wcag");
-
-        // Set current year
+        // Update dynamic years
         const currentYear = new Date().getFullYear();
-        if (year1) year1.textContent = currentYear;
-        if (year2) year2.textContent = currentYear;
+        document.getElementById("year").textContent = currentYear;
+        document.getElementById("year2").textContent = currentYear;
 
-        // Validation URLs
-        if (htmlLink) htmlLink.href = "https://validator.w3.org/check?uri=" + location.href;
-        if (cssLink) cssLink.href = "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href;
-        if (wcagLink) wcagLink.href = "https://wave.webaim.org/report#/" + location.href;
+        // Update validation links
+        document.getElementById("validation_link_html").href = "https://validator.w3.org/check?uri=" + location.href;
+        document.getElementById("validation_link_css").href = "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href;
+        document.getElementById("validation_link_wcag").href = "https://wave.webaim.org/report#/" + location.href;
 
-        // Toggle footer theme
-        if (toggleBtn && footer) {
-            let isDarkMode = false;
-            toggleBtn.addEventListener('click', () => {
-                if (!isDarkMode) {
-                    footer.style.backgroundColor = "#1e3d58";
-                    footer.style.color = "#ffffff";
-                } else {
-                    footer.style.backgroundColor = "#4a90e2";
-                    footer.style.color = "#ffffff";
-                }
-                isDarkMode = !isDarkMode;
+        // Toggle dark mode class on <body>
+        const toggleBtn = document.getElementById("toggle-footer-theme");
+        if (toggleBtn) {
+            toggleBtn.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
             });
         }
 
-        // Hover effect on links
-        const footerLinks = document.querySelectorAll('#footer-nav a');
-        footerLinks.forEach(link => {
-            link.addEventListener('mouseover', () => {
-                link.style.color = "#ffcc00";
-            });
-            link.addEventListener('mouseout', () => {
-                link.style.color = "";
-            });
+        // Hover effect for footer links
+        document.querySelectorAll("#footer-nav a").forEach(link => {
+            link.addEventListener("mouseover", () => link.style.color = "#ffcc00");
+            link.addEventListener("mouseout", () => link.style.color = "");
         });
     }
 
-    // If HTMLInclude is active, wait for content load
+    // Delay for HTML includes to load
     if (window.HTMLInclude) {
         HTMLInclude();
-        setTimeout(initFooterFeatures, 400); // Wait for include to finish
+        setTimeout(initFooterFeatures, 300);
     } else {
         initFooterFeatures();
     }

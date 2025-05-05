@@ -353,3 +353,26 @@ details.active-service {
     background-color: var(--footer-bg);
 }
 
+/* Dark Theme Overrides */
+body.dark-mode {
+    --background-blue: #1a1a1a;
+    --header-blue: #333333;
+    --sidebar-blue: #2a2a2a;
+    --navbar-bg: #444444;
+    --text-light: #ffffff;
+    --text-dark: #f0f0f0;
+    --footer-bg: #111111;
+}
+
+/* Optional: change sidebar button colors in dark mode */
+body.dark-mode #toggle-spotlight,
+body.dark-mode #toggle-fastfact {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode #toggle-spotlight:hover,
+body.dark-mode #toggle-fastfact:hover {
+    background-color: #888;
+}
+
